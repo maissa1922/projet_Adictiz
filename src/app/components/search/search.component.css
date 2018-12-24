@@ -1,0 +1,21 @@
+body {
+    background-color: #333;
+    color: #FFF;
+}
+
+h3 {
+    color : #FFF;
+}
+
+.container {
+    background-color: black;
+}
+
+.list-item-part {
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.element {
+    display: inline-block;
+}

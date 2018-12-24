@@ -1,0 +1,5 @@
+.block {
+    display: inline-block;
+    vertical-align: text-top;
+    margin : 10px;
+}

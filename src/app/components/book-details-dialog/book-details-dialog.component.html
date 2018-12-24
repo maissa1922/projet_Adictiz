@@ -1,0 +1,25 @@
+<h2 mat-dialog-title><strong>Title :</strong>{{book.title}}</h2>
+<mat-dialog-content class="mat-typography"> 
+  <div class="block">
+      <img *ngIf="book.imageLinks" width="75px" height="100px" src = {{book.imageLinks.thumbnail}}/>
+  </div>
+  <div class="block">
+    <div *ngIf="book.authors">
+      <strong>Authors : </strong>
+      <span *ngFor="let author of book.authors">
+          <span>{{author}} .</span>
+      </span>
+    </div>
+    <div *ngIf="book.categories">
+      <strong>Categories : </strong>
+      <span *ngFor="let cat of book.categories">
+          <span>{{cat}} .</span>
+      </span>
+    </div>
+    <div>
+      <strong>Preview link : </strong> <a href="{{book.previewLink}}" target="{{book.previewLink}}">Read the book</a>
+    </div>
+  </div>
+    
+
+</mat-dialog-content>

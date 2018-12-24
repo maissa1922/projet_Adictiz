@@ -1,0 +1,22 @@
+body {
+    background-color: #333;
+    color: #FFF;
+}
+
+h3 {
+    color : #FFF;
+}
+
+.container {
+    background-color: black;
+}
+
+.list-item-part {
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.filter {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,7 @@
+<h2>Need a book?</h2>
+<span>Use Biblio-app to find new books and read your favorite ones</span>
+<br/>
+<br/>
+
+<input class="element" [(ngModel)] = "searchStr" name="searchStr" placeholder="search a book ..."/>
+<button class="element" routerLink="/book-list" routerLinkActive="active" (click)="searchBook()">GO</button>

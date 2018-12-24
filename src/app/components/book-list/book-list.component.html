@@ -1,0 +1,32 @@
+<h2>Books list :</h2>
+
+<div >
+  <button routerLink="/search">Back</button>
+  <input class="filter" matInput type="text" [(ngModel)]="searchFilter"/>
+</div>
+<div *ngIf = "books">
+  <div *ngFor = "let book of books | filter : searchFilter">
+    <div (click)="openDialog(book)">
+      <h4><strong>{{book.volumeInfo.title}}</strong></h4>
+      <div class="list-item-part">
+        <img *ngIf="book.volumeInfo.imageLinks" width="70px" height="90px" src = {{book.volumeInfo.imageLinks.thumbnail}}/>
+      </div>
+      <div class="list-item-part">
+        <span *ngIf="book.volumeInfo.authors" style="margin-left: 10px;">
+          Authors : 
+          <span *ngFor="let author of book.volumeInfo.authors">
+            {{author}} .
+          </span>
+        </span>
+        <br/>
+        <span *ngIf="book.volumeInfo.categories" style="margin-left: 10px;">
+           Categories :
+           <span *ngFor="let cat of book.volumeInfo.categories">
+              {{cat}} .
+            </span>
+          </span>
+      </div>
+    </div>
+    <hr/>
+  </div>
+</div>
